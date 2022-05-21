@@ -26,7 +26,6 @@ class Form extends React.Component {
           <label htmlFor='Moeda'>
             <select id='Moeda'> */}
 
-
           <select>
             <option>Escolha a Moeda</option>
             { currencies.map((currency, i) => (
