@@ -1,8 +1,6 @@
 export const SAVE_EMAIL = 'SAVE_EMAIL';
 
-export function addEmail(email) {
-  return {
-    type: SAVE_EMAIL,
-    email,
-  };
-}
+export const addEmail = (email) => ({
+  type: SAVE_EMAIL,
+  email,
+});
