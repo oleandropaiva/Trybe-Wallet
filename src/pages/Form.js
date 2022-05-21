@@ -38,27 +38,34 @@ class Form extends React.Component {
 
           <label htmlFor="currency">
             Moeda:
-            <select
-              id="currency"
-              name="currency"
-            >
-              { currencies.map((currency, i) => (
-                <option key={ i } value={ currency }>{currency}</option>
+            <select id="currency" name="currency">
+              {currencies.map((currency, i) => (
+                <option key={ i } value={ currency }>
+                  {currency}
+                </option>
               ))}
             </select>
           </label>
 
-          <label htmlFor="pagamento">
-            Pagamento:
-            <select
-            id='pagamento'
-            data-testid="method-input"
-            name="method"
-            
-            >
+          <label htmlFor="method">
+            Formas de Pagamento:
+            <select id="method" data-testid="method-input" name="method">
+              <option value="credit">Cartão de crédito</option>
+              <option value="debit">Cartão de débito</option>
+              <option value="cash">Dinheiro</option>
             </select>
           </label>
 
+          <label htmlFor="tag">
+            Tag:
+            <select id="tag" data-testid="tag-input" name="tag">
+              <option value="food">Alimentação</option>
+              <option value="transport">Transporte</option>
+              <option value="recreation">Lazer</option>
+              <option value="job">Trabalho</option>
+              <option value="health">Saúde</option>
+            </select>
+          </label>
         </form>
       </section>
     );
@@ -66,7 +73,8 @@ class Form extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-  currencies: state.wallet.currencies });
+  currencies: state.wallet.currencies,
+});
 
 const mapDispatchToProps = (dispatch) => ({
   fetchCurrencies: () => dispatch(api()),
