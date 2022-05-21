@@ -14,24 +14,50 @@ class Form extends React.Component {
     return (
       <section>
         <form>
-          {/* <input
-            type="number"
-            data-testid="value-input"
-          />
-          <input
-            type='text'
-            data-testid="description-input"
-          />
+          <label htmlFor="currency">
+            Valor:
+            <input
+              type="number"
+              data-testid="value-input"
+              name="value"
+              id="value"
+              placeholder="Valor"
+            />
+          </label>
 
-          <label htmlFor='Moeda'>
-            <select id='Moeda'> */}
+          <label htmlFor="description">
+            Descrição:
+            <input
+              type="text"
+              data-testid="description-input"
+              name="description"
+              id="description"
+              placeholder="Descrição"
+            />
+          </label>
 
-          <select>
-            <option>Escolha a Moeda</option>
-            { currencies.map((currency, i) => (
-              <option key={ i } value={ currency }>{currency}</option>
-            ))}
-          </select>
+          <label htmlFor="currency">
+            Moeda:
+            <select
+              id="currency"
+              name="currency"
+            >
+              { currencies.map((currency, i) => (
+                <option key={ i } value={ currency }>{currency}</option>
+              ))}
+            </select>
+          </label>
+
+          <label htmlFor="pagamento">
+            Pagamento:
+            <select
+            id='pagamento'
+            data-testid="method-input"
+            name="method"
+            
+            >
+            </select>
+          </label>
 
         </form>
       </section>
