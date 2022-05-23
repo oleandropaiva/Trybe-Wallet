@@ -104,33 +104,37 @@ class Form extends React.Component {
             </select>
           </label>
 
-          <label htmlFor="method">
+          <label
+            htmlFor="method"
+          >
             Formas de Pagamento:
             <select
-              data-testid="method-input"
+              id="method"
               name="method"
+              data-testid="method-input"
               value={ method }
               onChange={ this.handleChange }
             >
-              <option value="cash">Dinheiro</option>
-              <option value="credit">Cartão de crédito</option>
-              <option value="debit">Cartão de débito</option>
+              <option value="Dinheiro">Dinheiro</option>
+              <option value="Cartão de crédito">Cartão de crédito</option>
+              <option value="Cartão de débito">Cartão de débito</option>
             </select>
           </label>
 
           <label htmlFor="tag">
             Tag:
             <select
+              id="tag"
               data-testid="tag-input"
               name="tag"
               value={ tag }
               onChange={ this.handleChange }
             >
-              <option value="food">Alimentação</option>
-              <option value="transport">Transporte</option>
-              <option value="recreation">Lazer</option>
-              <option value="job">Trabalho</option>
-              <option value="health">Saúde</option>
+              <option value="Alimentação">Alimentação</option>
+              <option value="Lazer">Lazer</option>
+              <option value="Trabalho">Trabalho</option>
+              <option value="Transporte">Transporte</option>
+              <option value="Saúde">Saúde</option>
             </select>
           </label>
           <button
