@@ -13,3 +13,11 @@ function App() {
 }
 
 export default App;
+function App() {
+  return (
+    <Switch>
+      <Route exact path="/" component={ Lp } />
+    </Switch>
+  );
+}
+
